@@ -3,6 +3,7 @@ import { BlankLayout } from "../components/Layouts/BlankLayout";
 import ThemeContext from "../context/ThemeContext";
 import React, { useContext, useEffect } from "react";
 import Image from "next/image";
+import ProjectCards from "../components/ProjectCards";
 import Link from "next/link";
 
 const Home: NextPage = () => {
@@ -49,7 +50,9 @@ const Home: NextPage = () => {
 
       {/* WHAT I OFFER SECTION */}
       <section className="py-20 px-7 lg:px-40">
-        <h2 className="pb-24 text-4xl font-bold md:pb-32 md:text-5xl">What I offer</h2>
+        <h2 className="pb-24 text-4xl font-bold md:pb-32 md:text-5xl">
+          What I offer
+        </h2>
         <div className="flex flex-col md:flex-row ">
           <article className="flex flex-col justify-start px-16 py-10 text-center md:w-1/3">
             <Image
@@ -90,6 +93,53 @@ const Home: NextPage = () => {
               and quality softwares.
             </p>
           </article>
+        </div>
+      </section>
+      {/* END WHAT I OFFER SECTION */}
+      <section className="py-20 px-7 lg:px-40">
+        <h2 className="pb-24 text-4xl font-bold md:pb-32 md:text-5xl">
+          Recent Projects
+        </h2>
+        <div className="flex flex-col w-full pb-32">
+          <ProjectCards
+            imageURL="/assets/images/mockup.jpg"
+            title="Lorem ipsum"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Donec ac interdum risus, vitae eleifend velit. Etiam
+            nec mi faucibus, accumsan dui eu, consectetur ante.
+            Cras eleifend nibh sapien, eget sagittis sem laoreet et.
+            Nunc suscipit molestie elit, ut dictum ante 
+            pellentesque et Maecenas tempus porttitor dui, et
+            "
+          />
+          <ProjectCards
+            imageURL="/assets/images/mockup.jpg"
+            title="Lorem ipsum"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Donec ac interdum risus, vitae eleifend velit. Etiam
+            nec mi faucibus, accumsan dui eu, consectetur ante.
+            Cras eleifend nibh sapien, eget sagittis sem laoreet et.
+            Nunc suscipit molestie elit, ut dictum ante 
+            pellentesque et Maecenas tempus porttitor dui, et
+            "
+          />
+          <ProjectCards
+            imageURL="/assets/images/mockup.jpg"
+            title="Lorem ipsum"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Donec ac interdum risus, vitae eleifend velit. Etiam
+            nec mi faucibus, accumsan dui eu, consectetur ante.
+            Cras eleifend nibh sapien, eget sagittis sem laoreet et.
+            Nunc suscipit molestie elit, ut dictum ante 
+            pellentesque et Maecenas tempus porttitor dui, et
+            "
+          />
+          
+        </div>
+        <div className="mx-auto text-center">
+        <Link href="/projects">
+          <a className="px-24 py-5 border-2 border-neutral-800 bg-neutral-800 text-neutral-200 hover:border-neutral-700 hover:bg-neutral-700">View All</a>
+        </Link>
         </div>
       </section>
     </BlankLayout>
