@@ -11,7 +11,7 @@ export const BlankLayout = ({ children }: { children: React.ReactNode }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 600);
+    setTimeout(() => setIsLoading(false), 700);
   }, []);
 
   return (
