@@ -23,7 +23,7 @@ export const BlankLayout = ({ children }: { children: React.ReactNode }) => {
               width={57}
               height={57}
               objectFit="cover"
-              src={"/assets/images/Logo.svg"}
+              src={"/assets/images/logo.svg"}
               alt=""
             />
           </div>
