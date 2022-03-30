@@ -2,6 +2,68 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { BlankLayout } from "../components/Layouts/BlankLayout";
+import { IconType } from "react-icons";
+import {
+  SiLaravel,
+  SiKotlin,
+  SiAndroidstudio,
+  SiDjango,
+  SiReact,
+  SiNextdotjs,
+  SiGit,
+  SiGithub,
+  SiJavascript,
+  SiJava,
+  SiPython,
+  SiHtml5,
+  SiCss3,
+  SiPhp,
+  SiMysql,
+  SiPostgresql,
+  SiTailwindcss,
+  SiBootstrap,
+  SiCplusplus,
+  SiFlask,
+  SiSqlite,
+  SiMaterialui,
+  SiFlutter,
+  SiTypescript,
+  SiDart
+} from "react-icons/si";
+const TechStack = ({ Icon, name }: { Icon: IconType; name: string }) => {
+  return (
+    <>
+      <div className="flex justify-between px-10 py-3 mx-2 my-5 border-2 rounded-sm hover:animate-bounce border-neutral-900 dark:border-white">
+        <Icon className="" size={27} />
+        <p className="pl-2 font-bold">{name}</p>
+      </div>
+    </>
+  );
+};
+
+const Certificate = ({
+  issuer,
+  name,
+  url,
+}: {
+  issuer: string;
+  name: string;
+  url: string;
+}) => {
+  return (
+    <>
+      <Link href={url}>
+        <a>
+          <div className="px-5 py-3 m-3 transition-all duration-300 rounded-sm bg-neutral-100 dark:bg-black hover:ring-1 hover:ring-cyan-200">
+            <h4 className="font-semibold">{name}</h4>
+            <span className="opacity-70">{issuer}</span>
+          </div>
+        </a>
+      </Link>
+    </>
+  );
+};
+
 const About: NextPage = () => {
   return (
     <>
@@ -86,10 +148,91 @@ const About: NextPage = () => {
             </div>
           </div>
 
-          <div>
+          <div className="pb-32">
             <h2 className="pb-10 text-2xl font-extrabold">Tech Stack</h2>
-            <div className="">
-              
+            <h3 className="pt-10 pb-5 text-xl">Version Control</h3>
+            <div className="flex flex-wrap justify-evenly md:justify-start">
+              <TechStack Icon={SiGit} name="Git" />
+              <TechStack Icon={SiGithub} name="GitHub" />
+            </div>
+            <h3 className="pt-10 pb-5 text-xl">Front-End</h3>
+            <div className="flex flex-wrap justify-evenly md:justify-start">
+              <TechStack Icon={SiNextdotjs} name="Next.js" />
+              <TechStack Icon={SiReact} name="React" />
+              <TechStack Icon={SiCss3} name="CSS3" />
+              <TechStack Icon={SiHtml5} name="HTML5" />
+              <TechStack Icon={SiJavascript} name="JavaScript" />
+              <TechStack Icon={SiTailwindcss} name="Tailwind CSS" />
+              <TechStack Icon={SiBootstrap} name="Bootstrap5" />
+              <TechStack Icon={SiMaterialui} name="MaterialUI" />
+            </div>
+            <h3 className="pt-10 pb-5 text-xl">Back-end</h3>
+            <div className="flex flex-wrap justify-evenly md:justify-start">
+              <TechStack Icon={SiDjango} name="Django" />
+              <TechStack Icon={SiLaravel} name="Laravel" />
+              <TechStack Icon={SiFlask} name="Flask" />
+            </div>
+            <h3 className="pt-10 pb-5 text-xl">Database</h3>
+            <div className="flex flex-wrap justify-evenly md:justify-start">
+              <TechStack Icon={SiMysql} name="MySQL" />
+              <TechStack Icon={SiPostgresql} name="PostgreSQL" />
+              <TechStack Icon={SiSqlite} name="SQLite" />
+            </div>
+            <h3 className="pt-10 pb-5 text-xl">Mobile Development</h3>
+            <div className="flex flex-wrap justify-evenly md:justify-start">
+              <TechStack Icon={SiAndroidstudio} name="Android Studio" />
+              <TechStack Icon={SiFlutter} name="Flutter" />
+            </div>
+            <h3 className="pt-10 pb-5 text-xl">Programming Languages</h3>
+            <div className="flex flex-wrap justify-evenly md:justify-start">
+              <TechStack Icon={SiTypescript} name="TypeScript" />
+              <TechStack Icon={SiPython} name="Python" />
+              <TechStack Icon={SiPhp} name="PHP" />
+              <TechStack Icon={SiKotlin} name="Kotlin" />
+              <TechStack Icon={SiJava} name="Java" />
+              <TechStack Icon={SiCplusplus} name="C/C++" />
+              <TechStack Icon={SiDart} name="Dart"/>
+            </div>
+          </div>
+          {/* certificates */}
+          <div className="pb-32">
+            <h2 className="pb-10 text-2xl font-extrabold"> Certifications</h2>
+            <div className="flex flex-wrap justify-evenly md:justify-start">
+              <Certificate
+                issuer="freeCodeCamp.org"
+                name="Responsive Web Design"
+                url="https://www.freecodecamp.org/certification/edmerkun/responsive-web-design"
+              />
+              <Certificate
+                issuer="freeCodeCamp.org"
+                name="Scientific Computing with Python"
+                url="https://www.freecodecamp.org/certification/edmerkun/scientific-computing-with-python-v7"
+              />
+              <Certificate
+                issuer="freeCodeCamp.org"
+                name="JavaScript Algorithms and Data Structures"
+                url="https://www.freecodecamp.org/certification/edmerkun/javascript-algorithms-and-data-structures"
+              />
+              <Certificate
+                issuer="TESTDOME"
+                name="Python Algorithms"
+                url="https://app.testdome.com/cert/e5388487f6124cf693b6e401f26aeaa1"
+              />
+              <Certificate
+                issuer="TESTDOME"
+                name="Python"
+                url="https://app.testdome.com/cert/e2a0b532b27547369ef01cec73149cf0"
+              />
+              <Certificate
+                issuer="TESTDOME"
+                name="HTML/CSS, JavaScript, PHP, and SQL"
+                url="https://app.testdome.com/cert/13c2427d311f4fbf96f8c09c2674a56c"
+              />
+              <Certificate
+                issuer="TESTDOME"
+                name="HTML/CSS and JavaScript"
+                url="https://app.testdome.com/cert/d60164d0b4fd40339c20a47445fb1f57"
+              />
             </div>
           </div>
         </section>

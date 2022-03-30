@@ -6,6 +6,7 @@ import {
   AiFillTwitterSquare,
   AiFillFacebook,
   AiFillInstagram,
+  AiFillGithub,
 } from "react-icons/ai";
 import ThemeContext from "../context/ThemeContext";
 
@@ -74,17 +75,50 @@ export default function Footer() {
         </div>
         <div className="pt-10 lg:pt-0 md:w-1/4 ">
           <ul className="flex">
-            <SocialLink icon={<AiFillLinkedin size={35} color={`${(!theme.isDark)? '#363636':'#fafafa'}`}/>}
-            url="https://www.linkedin.com/in/edmerpizarra/"
+            <SocialLink
+              icon={
+                <AiFillLinkedin
+                  size={35}
+                  color={`${!theme.isDark ? "#363636" : "#fafafa"}`}
+                />
+              }
+              url="https://www.linkedin.com/in/edmerpizarra/"
             />
-            <SocialLink icon={<AiFillFacebook size={35} color={`${(!theme.isDark)? '#363636':'#fafafa'}`}/>}
-            url="https://www.facebook.com/EdmerKun/"
+            <SocialLink
+              icon={
+                <AiFillFacebook
+                  size={35}
+                  color={`${!theme.isDark ? "#363636" : "#fafafa"}`}
+                />
+              }
+              url="https://www.facebook.com/EdmerKun/"
             />
-            <SocialLink icon={<AiFillInstagram size={35} color={`${(!theme.isDark)? '#363636':'#fafafa'}`}/>}
-            url="https://www.linkedin.com/in/edmerpizarra/"
+            <SocialLink
+              icon={
+                <AiFillInstagram
+                  size={35}
+                  color={`${!theme.isDark ? "#363636" : "#fafafa"}`}
+                />
+              }
+              url="https://www.linkedin.com/in/edmerpizarra/"
             />
-            <SocialLink icon={<AiFillTwitterSquare size={35} color={`${(!theme.isDark)? '#363636':'#fafafa'}`}/>}
-            url="https://twitter.com/EdmerKun/"
+            <SocialLink
+              icon={
+                <AiFillTwitterSquare
+                  size={35}
+                  color={`${!theme.isDark ? "#363636" : "#fafafa"}`}
+                />
+              }
+              url="https://twitter.com/EdmerKun/"
+            />
+            <SocialLink
+              icon={
+                <AiFillGithub
+                  size={35}
+                  color={`${!theme.isDark ? "#363636" : "#fafafa"}`}
+                />
+              }
+              url="https://github.com/edmer664"
             />
           </ul>
         </div>
