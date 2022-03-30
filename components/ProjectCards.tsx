@@ -13,7 +13,7 @@ export const ProjectCards = (props: ProjectCardProps) => {
   return (
     <Link href={`${props.url ? props.url : ""}`}>
       <a data-aos="fade-up">
-        <article className="hover:bg-gradient-to-l hover:from-cyan-100 flex hover:scale-90 hover:px-3 hover:shadow-xl transition-all duration-300 dark:hover:from-black rounded-md hover:rotate-1 my-1 md:flex-row flex-col md:justify-evenly min-h-[300px] text-left py-8">
+        <article className="hover:bg-gradient-to-l hover:from-neutral-100 flex hover:scale-90 hover:px-3 hover:shadow-xl transition-all duration-1000  ease-in-out dark:hover:from-black rounded-md hover:rotate-1 my-1 md:flex-row flex-col md:justify-evenly min-h-[300px] text-left py-8">
           <div className="w-full md:w-1/2 ">
             <Image
               width={400}

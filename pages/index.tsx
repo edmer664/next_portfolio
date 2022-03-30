@@ -152,7 +152,7 @@ const Home: NextPage = () => {
         </div>
         <div className="mx-auto text-center">
           <Link href="/projects">
-            <a className="px-24 py-5 border-2 border-neutral-800 bg-neutral-800 text-neutral-200 hover:border-neutral-700 hover:bg-neutral-700">
+            <a className="px-24 py-5 border-2 border-neutral-800 bg-neutral-800 text-neutral-200 hover:border-neutral-700 hover:bg-neutral-700 dark:hover:bg-black">
               View All
             </a>
           </Link>
