@@ -5,11 +5,19 @@ import React, { useContext, useEffect } from "react";
 import Image from "next/image";
 import ProjectCards from "../components/ProjectCards";
 import Link from "next/link";
+import Head  from "next/head";
 
 const Home: NextPage = () => {
   
 
   return (
+    <>
+    <Head>
+      <title>
+        Edmer - Home
+      </title>
+      
+    </Head>
     <BlankLayout>
       {/* HERO SECTION */}
       <section className="flex flex-col-reverse justify-between w-full pb-20 font-bold px-7 md:flex-row lg:px-40">
@@ -128,10 +136,11 @@ const Home: NextPage = () => {
             url="https://confession.edmer.xyz"
           />
           <ProjectCards
-            imageURL="/assets/images/mockup.jpg"
+            imageURL="/assets/images/projects/pockethub.png"
             title="Pocket Hub"
             description="A fully-featured social website implemented using PHP laravel and javascript. A fully functional CRUD application, feat includes but is not limited to posts, comments, and messages.
             "
+            url="https://hub.pocketdevs.ph"
           />
           <ProjectCards
             imageURL="/assets/images/projects/wpi2.png"
@@ -151,6 +160,7 @@ const Home: NextPage = () => {
       </section>
       {/* PROJECTS END */}
     </BlankLayout>
+    </>
   );
 };
 
