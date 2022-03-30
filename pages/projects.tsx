@@ -44,17 +44,17 @@ export const Projects: NextPage = () => {
             />
             <ProjectCards
               imageURL="/assets/images/projects/wpi2.png"
-              title="WPI Enrollment System"
-              description="An unofficial website for West Philippines Institute implemented using React, JavaScript, Python, and Django. The app uses Django as the backend to perform backend processing for enrollment system and information board.
+              title="CLI random_picker"
+              description="Can't pick about something? Let this random picker do the decision for you. Simply open your command-line/terminal and call this little script to make that hard decision for you. 
             "
-              url="https://wpi.edmer.xyz"
+              url="https://github.com/edmer664/random_picker"
             />
             <ProjectCards
-              imageURL="/assets/images/projects/wpi2.png"
-              title="WPI Enrollment System"
-              description="An unofficial website for West Philippines Institute implemented using React, JavaScript, Python, and Django. The app uses Django as the backend to perform backend processing for enrollment system and information board.
+              imageURL="/assets/images/projects/rlnscrape.png"
+              title=" rln_scraper"
+              description="A python application to scrape a novel from readlightnovel.org and compiles it into a file for convinient reading 
             "
-              url="https://wpi.edmer.xyz"
+              url="https://github.com/edmer664/rln_scraper"
             />
           </div>
         </section>
