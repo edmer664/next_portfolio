@@ -1,13 +1,18 @@
 import type { NextPage } from "next";
 import { BlankLayout } from "../components/Layouts/BlankLayout";
 import ThemeContext from "../context/ThemeContext";
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import ProjectCards from "../components/ProjectCards";
 import Link from "next/link";
 import Head  from "next/head";
 
 const Home: NextPage = () => {
+  const [isLoading,setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 3000);
+  }, [])
+  
   
 
   return (
@@ -45,8 +50,10 @@ const Home: NextPage = () => {
           </div>
         </article>
         <div
-          className="flex justify-center md:justify-end lg:w-1/3"
-          data-aos="fade-left"
+          className={`flex justify-center md:justify-end lg:w-1/3 animate__animated ${
+            isLoading ? "animate__zoomIn" : "animate__pulse"
+          }`}
+          
         >
           <Image
             width={400}
@@ -69,7 +76,7 @@ const Home: NextPage = () => {
         </h2>
         <div className="flex flex-col md:flex-row ">
           <article
-            className="flex flex-col justify-start px-16 py-10 mx-2 text-center transition-all rounded-lg duration-600 dark:hover:bg-black md:w-1/3 hover:shadow-xl hover:bg-cyan-50"
+            className="flex flex-col justify-start px-10 py-10 mx-2 text-center transition-all rounded-lg duration-600 dark:hover:bg-black md:w-1/2 lg:w-1/3 hover:shadow-xl hover:bg-cyan-50"
             data-aos="fade-up"
           >
             <Image
@@ -83,7 +90,7 @@ const Home: NextPage = () => {
             <p>Receive your website in a clean and elegant UI.</p>
           </article>
           <article
-            className="flex flex-col justify-start px-16 py-10 mx-2 text-center transition-all rounded-lg duration-600 dark:hover:bg-black md:w-1/3 hover:shadow-xl hover:bg-cyan-50"
+            className="flex flex-col justify-start px-10 py-10 mx-2 text-center transition-all rounded-lg duration-600 dark:hover:bg-black md:w-1/2 lg:w-1/3 hover:shadow-xl hover:bg-cyan-50"
             data-aos="fade-up"
           >
             <Image
@@ -100,7 +107,7 @@ const Home: NextPage = () => {
             </p>
           </article>
           <article
-            className="flex flex-col justify-start px-16 py-10 mx-2 text-center transition-all rounded-lg duration-600 dark:hover:bg-black md:w-1/3 hover:shadow-xl hover:bg-cyan-50"
+            className="flex flex-col justify-start px-10 py-10 mx-2 text-center transition-all rounded-lg duration-600 dark:hover:bg-black md:w-1/2 lg:w-1/3 hover:shadow-xl hover:bg-cyan-50"
             data-aos="fade-up"
           >
             <Image
