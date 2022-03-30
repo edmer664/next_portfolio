@@ -22,6 +22,7 @@ class MyDocument extends Document {
             href="/assets/images/logo.svg"
             type="image/x-icon"
           />
+          <meta name="image" content="https://www.edmer.xyz/assets/images/banner.png"></meta>
           <meta name="title" content="Edmerson Pizarra" />
           <meta
             name="description"

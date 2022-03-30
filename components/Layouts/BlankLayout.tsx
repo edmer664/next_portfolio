@@ -6,7 +6,10 @@ import Image from "next/image";
 import ThemeContext from "../../context/ThemeContext";
 import ScrollUp from "../ScrollUp";
 
+
+
 export const BlankLayout = ({ children }: { children: React.ReactNode }) => {
+
   const theme = useContext(ThemeContext);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -16,6 +19,7 @@ export const BlankLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
+      
       {isLoading ? (
         <div className="flex flex-col items-center justify-center w-screen h-screen bg-slate-100">
           <div className="py-3">
