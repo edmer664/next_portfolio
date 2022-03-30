@@ -5,8 +5,7 @@ import ThemeContext from "../context/ThemeContext";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsMoonFill, BsSunFill } from "react-icons/bs";
 import { useRouter } from "next/router";
-import 'animate.css';
-
+import "animate.css";
 
 const Navlink = ({ name, url }: { name: string; url: string }) => {
   return (
@@ -18,9 +17,21 @@ const Navlink = ({ name, url }: { name: string; url: string }) => {
   );
 };
 
-const NavlinkDesktop = ({ name, url,isActive }: { name: string; url: string;isActive:boolean }) => {
+const NavlinkDesktop = ({
+  name,
+  url,
+  isActive,
+}: {
+  name: string;
+  url: string;
+  isActive: boolean;
+}) => {
   return (
-    <li className={`py-12 transition-all px-7 ${isActive?"font-bold":"font-medium"}`}>
+    <li
+      className={`py-12 transition-all px-7 ${
+        isActive ? "font-bold" : "font-medium"
+      }`}
+    >
       <Link href={url}>
         <a>{name}</a>
       </Link>
@@ -29,29 +40,31 @@ const NavlinkDesktop = ({ name, url,isActive }: { name: string; url: string;isAc
 };
 
 export default function Navbar() {
-
   const context = useContext(ThemeContext);
 
   const [isOpen, setIsOpen] = useState(false);
   // const [isFirst,setIsFirst] = useState(true);
   // toggle menu
-  const [isLoading,setIsLoading] = useState(true);
-  useEffect(()=>{
-    setTimeout(()=>setIsLoading(false),1000);
-  },[]);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 1000);
+  }, []);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  const [currentLink,setCurrentLink] =  useState("");
+  const [currentLink, setCurrentLink] = useState("");
   const router = useRouter();
-  useEffect(()=>{
-    setCurrentLink(router.pathname)
-    console.log(router.pathname)
-  },[router.pathname])
+  useEffect(() => {
+    setCurrentLink(router.pathname);
+    console.log(router.pathname);
+  }, [router.pathname]);
 
   return (
     <>
-      <nav className="flex items-center justify-between py-5 lg:justify-between px-7 lg:px-40" data-aos="fade-down">
+      <nav
+        className="flex items-center justify-between py-5 lg:justify-between px-7 lg:px-40"
+        data-aos="fade-down"
+      >
         <div>
           {/* logo part */}
           <Image
@@ -71,19 +84,39 @@ export default function Navbar() {
           />
         </div>
         {/* desktop nav */}
-        <div className='hidden lg:block '>
+        <div className="hidden lg:block ">
           <ul className="flex justify-evenly">
-            <NavlinkDesktop name="Home" url="/" isActive={currentLink === "/" } />
-            <NavlinkDesktop name="About" url="/about" isActive={currentLink === "/about" } />
-            <NavlinkDesktop name="Projects" url="/projects" isActive={currentLink === "/projects" } />
-            <NavlinkDesktop name="Contact" url="/contact" isActive={currentLink === "/contact" } />
+            <NavlinkDesktop
+              name="Home"
+              url="/"
+              isActive={currentLink === "/"}
+            />
+            <NavlinkDesktop
+              name="About"
+              url="/about"
+              isActive={currentLink === "/about"}
+            />
+            <NavlinkDesktop
+              name="Projects"
+              url="/projects"
+              isActive={currentLink === "/projects"}
+            />
+            <NavlinkDesktop
+              name="Contact"
+              url="/contact"
+              isActive={currentLink === "/contact"}
+            />
           </ul>
         </div>
 
         {/* dark mode toggle */}
-        <div className={`hidden lg:block animate__animated ${isLoading ? "":"animate__bounce"} `}>
+        <div
+          className={`hidden lg:block animate__animated ${
+            isLoading ? "" : "animate__bounce"
+          } `}
+        >
           <button onClick={() => context.toggleIsDark()}>
-          {context.isDark ? (
+            {context.isDark ? (
               <BsSunFill color="#FFAC33" size={"27"} />
             ) : (
               <BsMoonFill color="#FFAC33" size={"27"} />
@@ -92,7 +125,13 @@ export default function Navbar() {
         </div>
       </nav>
       {/* menu pane */}
-      <div className={`${isOpen ? "block" : "hidden"} px-7 transition-all duration-700 animate__animated  ${isOpen ? "animate__zoomInDown" : "animate__zoomOutUp"}`}>
+      <div
+        className={`${
+          isOpen ? "block" : "hidden"
+        } px-7 transition-all duration-700 animate__animated  ${
+          isOpen ? "animate__zoomInDown" : "animate__zoomOutUp"
+        }`}
+      >
         <ul className="flex flex-col justify-between w-full ">
           <Navlink name="Home" url="/" />
           <Navlink name="About" url="/about" />
@@ -112,7 +151,6 @@ export default function Navbar() {
             )}
           </button>
         </div>
-        
       </div>
     </>
   );

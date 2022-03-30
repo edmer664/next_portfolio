@@ -25,7 +25,7 @@ export const ProjectCards = (props: ProjectCardProps) => {
           </div>
           <div className="flex flex-col w-full px-7 md:w-1/2">
             <h3 className="pb-5 text-lg font-bold">{props.title}</h3>
-            <p>{props.description}</p>
+            <p className="text-justify">{props.description}</p>
           </div>
         </article>
       </a>

@@ -29,47 +29,68 @@ const About: NextPage = () => {
             </Link>
           </article>
 
-          <div>
-            <h2 className="pb-10 text-2xl font-extrabold">Timeline</h2>
+          <div className="pb-10">
+            <h2 className="pb-20 text-2xl font-extrabold">Timeline</h2>
             <div className="w-full text-center">
               {/* row1 */}
               <div className="flex">
                 {/* col1 */}
-                <div className="w-2/5">
+                <div className="w-2/5" data-aos="fade-up">
                   <p>
                     <b>Web Developer Intern - PocketDevs</b>
                   </p>
                   <small>Jan 2022 - Present</small>
                 </div>
-                <div className="w-1/5 min-h-full ">
-                  <div className="w-1/2 h-full border-r-2"></div>
-                  <div className="w-1/2 h-full border-l-2"></div>
+                {/* col2 */}
+                <div className="w-1/5 h-14 ">
+                  <div className="w-1/2 border-r-2 h-14"></div>
+                  <div className="w-1/2 h-14"></div>
                 </div>
-
+                {/* col 3 */}
                 <div className="w-2/5"></div>
               </div>
               {/* row2 */}
               <div className="flex">
                 {/* col1 */}
                 <div className="w-2/5"></div>
-                <div className="w-1/5 min-h-full ">
-                  <div className="w-1/2 h-full border-r-2"></div>
-                  <div className="w-1/2 h-full border-l-2"></div>
+                {/* line */}
+                <div className="w-1/5 h-14 ">
+                  <div className="w-1/2 border-r-2 h-14"></div>
+                  <div className="w-1/2 h-14"></div>
                 </div>
-
-                <div className="w-2/5">
+                {/* col 3 */}
+                <div className="w-2/5" data-aos="fade-up">
                   <p>
-                    <b>Web Developer Intern - PocketDevs</b>
+                    <b>West Philippines Institute - STEM</b>
                   </p>
-                  <small>Jan 2022 - Present</small>
+                  <small>Aug 2020 - Present</small>
                 </div>
+              </div>
+              {/* row3 */}
+              <div className="flex">
+                {/* col1 */}
+                <div className="w-2/5" data-aos="fade-up">
+                  <p>
+                    <b>Lamao National HighSchool - JHS</b>
+                  </p>
+                  <small>June 2016 - Mar 2020</small>
+                </div>
+                {/* col 2 */}
+                <div className="w-1/5 h-14 ">
+                  <div className="w-1/2 border-r-2 h-14"></div>
+                  <div className="w-1/2 h-14"></div>
+                </div>
+                {/* col 3 */}
+                <div className="w-2/5"></div>
               </div>
             </div>
           </div>
 
           <div>
             <h2 className="pb-10 text-2xl font-extrabold">Tech Stack</h2>
-            <div>{/* TODO */}</div>
+            <div className="">
+              
+            </div>
           </div>
         </section>
       </BlankLayout>

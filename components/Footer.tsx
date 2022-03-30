@@ -78,13 +78,13 @@ export default function Footer() {
             url="https://www.linkedin.com/in/edmerpizarra/"
             />
             <SocialLink icon={<AiFillFacebook size={35} color={`${(!theme.isDark)? '#363636':'#fafafa'}`}/>}
-            url="https://www.linkedin.com/in/edmerpizarra/"
+            url="https://www.facebook.com/EdmerKun/"
             />
             <SocialLink icon={<AiFillInstagram size={35} color={`${(!theme.isDark)? '#363636':'#fafafa'}`}/>}
             url="https://www.linkedin.com/in/edmerpizarra/"
             />
             <SocialLink icon={<AiFillTwitterSquare size={35} color={`${(!theme.isDark)? '#363636':'#fafafa'}`}/>}
-            url="https://www.linkedin.com/in/edmerpizarra/"
+            url="https://twitter.com/EdmerKun/"
             />
           </ul>
         </div>
