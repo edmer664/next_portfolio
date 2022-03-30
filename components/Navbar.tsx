@@ -4,6 +4,7 @@ import Image from "next/image";
 import ThemeContext from "../context/ThemeContext";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsMoonFill, BsSunFill } from "react-icons/bs";
+import { useRouter } from "next/router";
 import 'animate.css';
 
 
@@ -17,9 +18,9 @@ const Navlink = ({ name, url }: { name: string; url: string }) => {
   );
 };
 
-const NavlinkDesktop = ({ name, url }: { name: string; url: string }) => {
+const NavlinkDesktop = ({ name, url,isActive }: { name: string; url: string;isActive:boolean }) => {
   return (
-    <li className="py-12 transition-all px-7">
+    <li className={`py-12 transition-all px-7 ${isActive?"font-bold":"font-medium"}`}>
       <Link href={url}>
         <a>{name}</a>
       </Link>
@@ -41,6 +42,12 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const [currentLink,setCurrentLink] =  useState("");
+  const router = useRouter();
+  useEffect(()=>{
+    setCurrentLink(router.pathname)
+    console.log(router.pathname)
+  },[router.pathname])
 
   return (
     <>
@@ -66,10 +73,10 @@ export default function Navbar() {
         {/* desktop nav */}
         <div className='hidden lg:block '>
           <ul className="flex justify-evenly">
-            <NavlinkDesktop name="Home" url="/" />
-            <NavlinkDesktop name="About" url="/about" />
-            <NavlinkDesktop name="Projects" url="/projects" />
-            <NavlinkDesktop name="Contact" url="/contact" />
+            <NavlinkDesktop name="Home" url="/" isActive={currentLink === "/" } />
+            <NavlinkDesktop name="About" url="/about" isActive={currentLink === "/about" } />
+            <NavlinkDesktop name="Projects" url="/projects" isActive={currentLink === "/projects" } />
+            <NavlinkDesktop name="Contact" url="/contact" isActive={currentLink === "/contact" } />
           </ul>
         </div>
 
