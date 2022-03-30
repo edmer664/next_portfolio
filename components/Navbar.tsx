@@ -4,6 +4,8 @@ import Image from "next/image";
 import ThemeContext from "../context/ThemeContext";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsMoonFill, BsSunFill } from "react-icons/bs";
+import 'animate.css';
+
 
 const Navlink = ({ name, url }: { name: string; url: string }) => {
   return (
@@ -30,14 +32,19 @@ export default function Navbar() {
   const context = useContext(ThemeContext);
 
   const [isOpen, setIsOpen] = useState(false);
+  // const [isFirst,setIsFirst] = useState(true);
   // toggle menu
+  const [isLoading,setIsLoading] = useState(true);
+  useEffect(()=>{
+    setTimeout(()=>setIsLoading(false),1000);
+  },[]);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
     <>
-      <nav className="flex items-center justify-between py-5 lg:justify-between px-7 lg:px-40">
+      <nav className="flex items-center justify-between py-5 lg:justify-between px-7 lg:px-40" data-aos="fade-down">
         <div>
           {/* logo part */}
           <Image
@@ -67,7 +74,7 @@ export default function Navbar() {
         </div>
 
         {/* dark mode toggle */}
-        <div className="hidden lg:block">
+        <div className={`hidden lg:block animate__animated ${isLoading ? "":"animate__bounce"} `}>
           <button onClick={() => context.toggleIsDark()}>
           {context.isDark ? (
               <BsSunFill color="#FFAC33" size={"27"} />
@@ -78,7 +85,7 @@ export default function Navbar() {
         </div>
       </nav>
       {/* menu pane */}
-      <div className={`${isOpen ? "block" : "hidden"} px-7`}>
+      <div className={`${isOpen ? "block" : "hidden"} px-7 transition-all duration-700 animate__animated  ${isOpen ? "animate__zoomInDown" : "animate__zoomOutUp"}`}>
         <ul className="flex flex-col justify-between w-full ">
           <Navlink name="Home" url="/" />
           <Navlink name="About" url="/about" />

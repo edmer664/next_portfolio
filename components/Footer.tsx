@@ -34,7 +34,7 @@ export default function Footer() {
   const theme = useContext(ThemeContext);
   return (
     <footer className="py-5 border-t-2 px-7 lg:px-40 border-neutral-700">
-      <div className="flex flex-col lg:items-start lg:flex-row lg:py-7">
+      <div className="flex flex-col lg:items-start md:flex-row md:py-7">
         <div className=" md:w-1/4">
           <Image
             width={57}
@@ -63,7 +63,7 @@ export default function Footer() {
               />
               <FooterLink
                 text={"edmerpizarra@gmail.com"}
-                link={"mail:edmerpizarra@gmail.com"}
+                link={"mailto:edmerpizarra@gmail.com"}
               />
               <FooterLink
                 text={"Hire me at UpWork"}

@@ -6,6 +6,7 @@ import Image from "next/image";
 import ProjectCards from "../components/ProjectCards";
 import Link from "next/link";
 
+
 const Home: NextPage = () => {
   const theme = useContext(ThemeContext);
 
@@ -13,7 +14,7 @@ const Home: NextPage = () => {
     <BlankLayout>
       {/* HERO SECTION */}
       <section className="flex flex-col-reverse justify-between w-full pb-20 font-bold px-7 md:flex-row lg:px-40">
-        <article className="flex flex-col lg:w-2/3">
+        <article className="flex flex-col lg:w-2/3" data-aos="fade-right">
           <div className="mb-3">
             <span className="font-normal">Hi, my name is Edmer.</span>
           </div>
@@ -36,7 +37,7 @@ const Home: NextPage = () => {
             </Link>
           </div>
         </article>
-        <div className="flex justify-center md:justify-end lg:w-1/3">
+        <div className="flex justify-center md:justify-end lg:w-1/3" data-aos="fade-left">
           <Image
             width={400}
             height={550}
@@ -50,11 +51,11 @@ const Home: NextPage = () => {
 
       {/* WHAT I OFFER SECTION */}
       <section className="py-20 px-7 lg:px-40">
-        <h2 className="pb-24 text-4xl font-bold md:pb-32 md:text-5xl">
+        <h2 className="pb-24 text-4xl font-bold md:pb-32 md:text-5xl" data-aos="fade-right">
           What I offer
         </h2>
         <div className="flex flex-col md:flex-row ">
-          <article className="flex flex-col justify-start px-16 py-10 text-center md:w-1/3">
+          <article className="flex flex-col justify-start px-16 py-10 mx-2 text-center transition-all rounded-lg duration-600 dark:hover:bg-black md:w-1/3 hover:shadow-xl hover:bg-cyan-50" data-aos="fade-up" >
             <Image
               width={100}
               height={100}
@@ -65,7 +66,7 @@ const Home: NextPage = () => {
             <h3 className="py-4 font-bold">Elegant Design</h3>
             <p>Receive your website in a clean and elegant UI.</p>
           </article>
-          <article className="flex flex-col justify-start px-16 py-10 text-center md:w-1/3">
+          <article className="flex flex-col justify-start px-16 py-10 mx-2 text-center transition-all rounded-lg duration-600 dark:hover:bg-black md:w-1/3 hover:shadow-xl hover:bg-cyan-50" data-aos="fade-up" >
             <Image
               width={100}
               height={100}
@@ -79,7 +80,7 @@ const Home: NextPage = () => {
               quality services.
             </p>
           </article>
-          <article className="flex flex-col justify-start px-16 py-10 text-center md:w-1/3">
+          <article className="flex flex-col justify-start px-16 py-10 mx-2 text-center transition-all rounded-lg duration-600 dark:hover:bg-black md:w-1/3 hover:shadow-xl hover:bg-cyan-50" data-aos="fade-up" >
             <Image
               width={100}
               height={100}
@@ -97,7 +98,7 @@ const Home: NextPage = () => {
       </section>
       {/* END WHAT I OFFER SECTION */}
       <section className="py-20 px-7 lg:px-40">
-        <h2 className="pb-24 text-4xl font-bold md:pb-32 md:text-5xl">
+        <h2 className="pb-24 text-4xl font-bold md:pb-32 md:text-5xl" data-aos="fade-up">
           Recent Projects
         </h2>
         <div className="flex flex-col w-full pb-32">
