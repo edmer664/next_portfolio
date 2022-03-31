@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { BlankLayout } from "../components/Layouts/BlankLayout";
 import { IconType } from "react-icons";
+import {MdSchool, MdWork} from 'react-icons/md'
 import {
   SiLaravel,
   SiKotlin,
@@ -28,8 +29,14 @@ import {
   SiMaterialui,
   SiFlutter,
   SiTypescript,
-  SiDart
+  SiDart,
 } from "react-icons/si";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+
 const TechStack = ({ Icon, name }: { Icon: IconType; name: string }) => {
   return (
     <>
@@ -91,64 +98,57 @@ const About: NextPage = () => {
             </Link>
           </article>
 
-          <div className="pb-10">
-            <h2 className="pb-20 text-2xl font-extrabold">Timeline</h2>
-            <div className="w-full text-center">
-              {/* row1 */}
-              <div className="flex">
-                {/* col1 */}
-                <div className="w-2/5" data-aos="fade-up">
-                  <p>
-                    <b>Web Developer Intern - PocketDevs</b>
-                  </p>
-                  <small>Jan 2022 - Present</small>
-                </div>
-                {/* col2 */}
-                <div className="w-1/5 min-h-[60px] ">
-                  <div className="w-1/2 h-full border-r-2"></div>
-                  <div className="w-1/2 h-full"></div>
-                </div>
-                {/* col 3 */}
-                <div className="w-2/5"></div>
-              </div>
-              {/* row2 */}
-              <div className="flex">
-                {/* col1 */}
-                <div className="w-2/5"></div>
-                {/* line */}
-                <div className="w-1/5 min-h-[60px] ">
-                  <div className="w-1/2 h-full border-r-2"></div>
-                  <div className="w-1/2 h-full"></div>
-                </div>
-                {/* col 3 */}
-                <div className="w-2/5" data-aos="fade-up">
-                  <p>
-                    <b>West Philippines Institute - STEM</b>
-                  </p>
-                  <small>Aug 2020 - Present</small>
-                </div>
-              </div>
-              {/* row3 */}
-              <div className="flex">
-                {/* col1 */}
-                <div className="w-2/5" data-aos="fade-up">
-                  <p>
-                    <b>Lamao National HighSchool - JHS</b>
-                  </p>
-                  <small>June 2016 - Mar 2020</small>
-                </div>
-                {/* col 2 */}
-                <div className="w-1/5 min-h-[60px] ">
-                  <div className="w-1/2 h-full border-r-2"></div>
-                  <div className="w-1/2 h-full"></div>
-                </div>
-                {/* col 3 */}
-                <div className="w-2/5"></div>
-              </div>
-            </div>
-          </div>
+          <h2 className="pb-10 text-2xl font-extrabold">Timeline</h2>
+          <VerticalTimeline >
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work dark:text-neutral-600"
+              dateClassName="dark:text-white"
+              contentArrowStyle={{
+                borderRight: "7px solid  #f6f6f6",
+              }}
+              iconStyle={{ background: "#363636", color: "#fafafa" }}
+              icon={<MdSchool />}
+              date="2016 - 2020"
+            >
+              <h3 className="font-bold vertical-timeline-element-title">
+                Junior High School - Lamao National High School
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">Limay, Bataan</h4>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work dark:text-neutral-600"
+              dateClassName="dark:text-white"
+              date="2020 - Present"
+              iconStyle={{ background: "#363636", color: "#fff" }}
+              icon={<MdSchool />}
+            >
+              <h3 className="font-bold vertical-timeline-element-title">Senior High School - West Philippines Institute of Tourism Science and Technology </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Limay, Bataan
+              </h4>
+              <small>
+                Science, Technology, Engineering and Mathematics
+              </small>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work dark:text-neutral-600"
+              date="2022 - Present"
+              dateClassName="dark:text-white"
+              iconStyle={{ background: "#c00000", color: "#fff" }}
+              icon={<MdWork />}
+            >
+              <h3 className="font-bold vertical-timeline-element-title">Web Developer Intern</h3>
+              <h4 className=" vertical-timeline-element-subtitle">
+                PocketDevs
+              </h4>
+              <small className="">
+                Develop and maintain web applications for clients
+              </small>
+            </VerticalTimelineElement>
+          </VerticalTimeline>
 
-          <div className="pb-32">
+
+          <div className="py-32">
             <h2 className="pb-10 text-2xl font-extrabold">Tech Stack</h2>
             <h3 className="pt-10 pb-5 text-xl">Version Control</h3>
             <div className="flex flex-wrap justify-evenly md:justify-start">
@@ -191,7 +191,7 @@ const About: NextPage = () => {
               <TechStack Icon={SiKotlin} name="Kotlin" />
               <TechStack Icon={SiJava} name="Java" />
               <TechStack Icon={SiCplusplus} name="C/C++" />
-              <TechStack Icon={SiDart} name="Dart"/>
+              <TechStack Icon={SiDart} name="Dart" />
             </div>
           </div>
           {/* certificates */}
