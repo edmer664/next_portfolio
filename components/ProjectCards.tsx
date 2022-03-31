@@ -23,7 +23,7 @@ export const ProjectCards = (props: ProjectCardProps) => {
               alt={`${props.title} Image`}
             />
           </div>
-          <div className="flex flex-col w-full py-3 px-7 md:w-1/2">
+          <div className="flex flex-col w-full py-3 px-1 lg:px-7 md:w-1/2">
             <h3 className="pb-5 text-lg font-bold">{props.title}</h3>
             <p className="text-justify">{props.description}</p>
           </div>
