@@ -33,7 +33,7 @@ import {
 const TechStack = ({ Icon, name }: { Icon: IconType; name: string }) => {
   return (
     <>
-      <div className="flex  justify-between px-10 my-1 py-3 mx-2 md:my-5 border-2 rounded-sm md:hover:animate-bounce border-neutral-900 dark:border-white">
+      <div className="flex justify-between px-10 py-3 mx-2 my-1 border-2 rounded-sm md:my-5 md:hover:animate-bounce border-neutral-900 dark:border-white">
         <Icon className="" size={27} />
         <p className="pl-2 font-bold">{name}</p>
       </div>
@@ -104,9 +104,9 @@ const About: NextPage = () => {
                   <small>Jan 2022 - Present</small>
                 </div>
                 {/* col2 */}
-                <div className="w-1/5 h-14 ">
-                  <div className="w-1/2 border-r-2 h-14"></div>
-                  <div className="w-1/2 h-14"></div>
+                <div className="w-1/5 min-h-[60px] ">
+                  <div className="w-1/2 h-full border-r-2"></div>
+                  <div className="w-1/2 h-full"></div>
                 </div>
                 {/* col 3 */}
                 <div className="w-2/5"></div>
@@ -116,9 +116,9 @@ const About: NextPage = () => {
                 {/* col1 */}
                 <div className="w-2/5"></div>
                 {/* line */}
-                <div className="w-1/5 h-14 ">
-                  <div className="w-1/2 border-r-2 h-14"></div>
-                  <div className="w-1/2 h-14"></div>
+                <div className="w-1/5 min-h-[60px] ">
+                  <div className="w-1/2 h-full border-r-2"></div>
+                  <div className="w-1/2 h-full"></div>
                 </div>
                 {/* col 3 */}
                 <div className="w-2/5" data-aos="fade-up">
@@ -138,9 +138,9 @@ const About: NextPage = () => {
                   <small>June 2016 - Mar 2020</small>
                 </div>
                 {/* col 2 */}
-                <div className="w-1/5 h-14 ">
-                  <div className="w-1/2 border-r-2 h-14"></div>
-                  <div className="w-1/2 h-14"></div>
+                <div className="w-1/5 min-h-[60px] ">
+                  <div className="w-1/2 h-full border-r-2"></div>
+                  <div className="w-1/2 h-full"></div>
                 </div>
                 {/* col 3 */}
                 <div className="w-2/5"></div>
