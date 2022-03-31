@@ -33,7 +33,7 @@ import {
 const TechStack = ({ Icon, name }: { Icon: IconType; name: string }) => {
   return (
     <>
-      <div className="flex justify-between px-10 py-3 mx-2 my-5 border-2 rounded-sm hover:animate-bounce border-neutral-900 dark:border-white">
+      <div className="flex  justify-between px-10 my-1 py-3 mx-2 md:my-5 border-2 rounded-sm md:hover:animate-bounce border-neutral-900 dark:border-white">
         <Icon className="" size={27} />
         <p className="pl-2 font-bold">{name}</p>
       </div>

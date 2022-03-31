@@ -26,7 +26,7 @@ const FooterLink = ({ text, link }: { text: string; link: string }) => {
 const SocialLink = ({ icon, url }: { icon: React.ReactNode; url: string }) => {
   return (
     <Link href={url}>
-      <a className="px-2">{icon}</a>
+      <a className="px-2 pb-2">{icon}</a>
     </Link>
   );
 };
