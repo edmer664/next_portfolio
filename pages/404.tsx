@@ -8,9 +8,9 @@ export const Custom404 = () => {
     <Head>
       <title>Edmer - 404</title>
     </Head>
-      <div className="flex flex-col h-screen px-40">
+      <div className="flex flex-col h-screen  px-20 lg:px-40">
         <div className="flex flex-col items-center justify-center md:flex-row">
-          <div className="w-1/2">
+          <div className="md:w-1/2 w-screen ">
             <Image
               width={500}
               height={500}
@@ -19,7 +19,7 @@ export const Custom404 = () => {
               alt="404"
             />
           </div>
-          <div className="w-1/2 py-5">
+          <div className="md:w-1/2 h-1/2 py-5">
             <h1 className="py-20 text-5xl font-extrabold">ERROR 404</h1>
             <p>
               The page you are looking for is not found please check if the
