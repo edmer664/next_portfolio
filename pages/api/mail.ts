@@ -25,7 +25,7 @@ export default function handler(req:NextApiRequest, res:NextApiResponse) {
   }
   Email.Email.send(mailOptions).then(
     (message:any) => {
-     
+     console.log(message);
       // redirect to thank you page
       res.json({
         message: 'Email sent successfully'
