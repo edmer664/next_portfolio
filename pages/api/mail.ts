@@ -23,6 +23,7 @@ export default function handler(req:NextApiRequest, res:NextApiResponse) {
     Username: process.env.EMAIL_USER,
     Password: process.env.EMAIL_PASSWORD
   }
+  console.log(mailOptions);
   Email.Email.send(mailOptions).then(
     (message:any) => {
      console.log(message);
