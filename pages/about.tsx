@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { BlankLayout } from "../components/Layouts/BlankLayout";
 import { IconType } from "react-icons";
-import {MdSchool, MdWork} from 'react-icons/md'
+import { MdSchool, MdWork } from "react-icons/md";
 import {
   SiLaravel,
   SiKotlin,
@@ -38,6 +38,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
+import { BsFlagFill } from "react-icons/bs";
 
 const TechStack = ({ Icon, name }: { Icon: IconType; name: string }) => {
   return (
@@ -74,7 +75,7 @@ const Certificate = ({
 };
 
 const About: NextPage = () => {
-  const theme = useContext(ThemeContext)
+  const theme = useContext(ThemeContext);
   return (
     <>
       <Head>
@@ -102,7 +103,7 @@ const About: NextPage = () => {
           </article>
 
           <h2 className="pb-10 text-2xl font-extrabold">Timeline</h2>
-          <VerticalTimeline lineColor={theme.isDark ? "#fff" : "#363636"} >
+          <VerticalTimeline lineColor={theme.isDark ? "#fff" : "#363636"}>
             <VerticalTimelineElement
               className="vertical-timeline-element--work dark:text-neutral-600"
               dateClassName="dark:text-white"
@@ -116,7 +117,9 @@ const About: NextPage = () => {
               <h3 className="font-bold vertical-timeline-element-title">
                 Junior High School - Lamao National High School
               </h3>
-              <h4 className="vertical-timeline-element-subtitle">Limay, Bataan</h4>
+              <h4 className="vertical-timeline-element-subtitle">
+                Limay, Bataan
+              </h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work dark:text-neutral-600"
@@ -125,32 +128,38 @@ const About: NextPage = () => {
               iconStyle={{ background: "#363636", color: "#fff" }}
               icon={<MdSchool />}
             >
-              <h3 className="font-bold vertical-timeline-element-title">Senior High School - West Philippines Institute of Tourism Science and Technology </h3>
+              <h3 className="font-bold vertical-timeline-element-title">
+                Senior High School - West Philippines Institute of Tourism
+                Science and Technology{" "}
+              </h3>
               <h4 className="vertical-timeline-element-subtitle">
                 Limay, Bataan
               </h4>
-              <small>
-                Science, Technology, Engineering and Mathematics
-              </small>
+              <small>Science, Technology, Engineering and Mathematics</small>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className=" vertical-timeline-element--work dark:text-neutral-600"
-              contentStyle={{background:"#c00000"}}
+              contentStyle={{ background: "#c00000" }}
               date="2022 - Present"
               dateClassName="dark:text-white"
               iconStyle={{ background: "#c00000", color: "#fff" }}
               icon={<MdWork />}
             >
-              <h3 className="font-bold text-white vertical-timeline-element-title">Web Developer Intern</h3>
-              <h4 className="text-white  vertical-timeline-element-subtitle">
+              <h3 className="font-bold text-white vertical-timeline-element-title">
+                Web Developer Intern
+              </h3>
+              <h4 className="text-white vertical-timeline-element-subtitle">
                 PocketDevs
               </h4>
               <small className="text-white ">
                 Develop and maintain web applications for clients
               </small>
             </VerticalTimelineElement>
+            <VerticalTimelineElement
+              iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+              icon={<BsFlagFill />}
+            />
           </VerticalTimeline>
-
 
           <div className="py-32">
             <h2 className="pb-10 text-2xl font-extrabold">Tech Stack</h2>
