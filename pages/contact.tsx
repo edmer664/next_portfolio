@@ -9,6 +9,7 @@ import Link from "next/link";
 export const Contact = () => {
   useEffect(() => {
     console.log("working calendly");
+
     // () => {
     //   const Calendly = window.Calendly;
     //   Calendly.initPopupWidget({
@@ -21,17 +22,25 @@ export const Contact = () => {
   return (
     <>
       <Head>
-        {/* <link
+        <link
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
-        /> */}
+        />
         <title>Edmer - Contact</title>
       </Head>
       <BlankLayout>
-        {/* <Script
+        <Script
           src="https://assets.calendly.com/assets/external/widget.js"
-          
-        /> */}
+          strategy="afterInteractive"
+        />
+        <Script id="calendly" strategy="afterInteractive">
+          {`
+          const button = document.getElementById('calendly-inline-widget');
+          button.addEventListener('click', () => { 
+          Calendly.initPopupWidget({url: 'https://calendly.com/edmer-is-dev/15min'});return false;
+          });
+          `}
+        </Script>
         <div className="min-h-[150px] bg-black dark:bg-neutral-300"></div>
         <section className="pt-10 pb-32 px-7 lg:px-40">
           <h1 className="pb-5 font-extrabold text-7xl">Contact</h1>
@@ -59,16 +68,22 @@ export const Contact = () => {
               </div>
 
               {/* <!-- Calendly badge widget begin --> */}
-              <div className="px-4 py-4 font-bold cursor-pointer md:w-1/2 hover:bg-neutral-700 hover:ring-2 ring-neutral-400 bg-neutral-800 text-neutral-100">
+              {/* <div className="px-4 py-4 font-bold cursor-pointer md:w-1/2 hover:bg-neutral-700 hover:ring-2 ring-neutral-400 bg-neutral-800 text-neutral-100">
                 <Link href="https://calendly.com/edmer-is-dev/15min">
                   <a>
-                    <div className="flex justify-center">
-                      <BsCalendar size={27} />
-                      <span className="pl-2 text-center">Schedule a meeting</span>
-                    </div>
+                    
                   </a>
                 </Link>
-              </div>
+              </div> */}
+              <button
+                id="calendly-inline-widget"
+                className="px-4 py-4 font-bold cursor-pointer md:w-1/2 hover:bg-neutral-700 hover:ring-2 ring-neutral-400 bg-neutral-800 text-neutral-100"
+              >
+                <div className="flex justify-center">
+                  <BsCalendar size={27} />
+                  <span className="pl-2 text-center">Schedule a meeting</span>
+                </div>
+              </button>
               {/* <div id="calendly"></div>
               {typeof window !== "undefined" && (
                 <PopupButton
