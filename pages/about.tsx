@@ -36,6 +36,8 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 const TechStack = ({ Icon, name }: { Icon: IconType; name: string }) => {
   return (
@@ -72,6 +74,7 @@ const Certificate = ({
 };
 
 const About: NextPage = () => {
+  const theme = useContext(ThemeContext)
   return (
     <>
       <Head>
@@ -99,7 +102,7 @@ const About: NextPage = () => {
           </article>
 
           <h2 className="pb-10 text-2xl font-extrabold">Timeline</h2>
-          <VerticalTimeline >
+          <VerticalTimeline lineColor={theme.isDark ? "#fff" : "#363636"} >
             <VerticalTimelineElement
               className="vertical-timeline-element--work dark:text-neutral-600"
               dateClassName="dark:text-white"
@@ -131,17 +134,18 @@ const About: NextPage = () => {
               </small>
             </VerticalTimelineElement>
             <VerticalTimelineElement
-              className="vertical-timeline-element--work dark:text-neutral-600"
+              className=" vertical-timeline-element--work dark:text-neutral-600"
+              contentStyle={{background:"#c00000"}}
               date="2022 - Present"
               dateClassName="dark:text-white"
               iconStyle={{ background: "#c00000", color: "#fff" }}
               icon={<MdWork />}
             >
-              <h3 className="font-bold vertical-timeline-element-title">Web Developer Intern</h3>
-              <h4 className=" vertical-timeline-element-subtitle">
+              <h3 className="font-bold text-white vertical-timeline-element-title">Web Developer Intern</h3>
+              <h4 className="text-white  vertical-timeline-element-subtitle">
                 PocketDevs
               </h4>
-              <small className="">
+              <small className="text-white ">
                 Develop and maintain web applications for clients
               </small>
             </VerticalTimelineElement>
