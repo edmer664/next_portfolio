@@ -38,7 +38,7 @@ export const Projects: NextPage = () => {
             <ProjectCards
               imageURL="/assets/images/projects/rpcstud.jpg"
               title="StudyingRPC"
-              description="A custom Discord Rich Presence to display when you're studying so you're stupid friends won't disturb you when you're studying. 
+              description="A custom Discord Rich Presence to display when you're studying so you're friends won't disturb you when studying. 
             "
               url="https://github.com/edmer664/StudyingRPC"
             />
