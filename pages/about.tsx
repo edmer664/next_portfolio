@@ -141,7 +141,7 @@ const About: NextPage = () => {
               className=" vertical-timeline-element--work dark:text-neutral-600"
               contentStyle={{ background: "#c00000" }}
               date="2022 - Present"
-              dateClassName="dark:text-white"
+              dateClassName="dark:text-white text-white lg:text-neutral-800"
               iconStyle={{ background: "#c00000", color: "#fff" }}
               icon={<MdWork />}
             >
