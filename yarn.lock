@@ -2425,11 +2425,6 @@
   "resolved" "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz"
   "version" "1.0.2"
 
-"xhr2@^0.2.1":
-  "integrity" "sha512-sID0rrVCqkVNUn8t6xuv9+6FViXjUVXq8H5rWOH2rz9fDNQEd4g0EA2XlcEdJXRz5BMEn4O1pJFdT+z4YHhoWw=="
-  "resolved" "https://registry.npmjs.org/xhr2/-/xhr2-0.2.1.tgz"
-  "version" "0.2.1"
-
 "xmlhttprequest@^1.8.0":
   "integrity" "sha1-Z/4HXFwk/vOfnWX197f+dRcZaPw="
   "resolved" "https://registry.npmjs.org/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz"
