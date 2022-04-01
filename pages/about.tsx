@@ -212,6 +212,11 @@ const About: NextPage = () => {
             <h2 className="pb-10 text-2xl font-extrabold"> Certifications</h2>
             <div className="flex flex-wrap justify-evenly md:justify-start">
               <Certificate
+                issuer="PocketDevs"
+                name="Web Development Fundamentals Certificate"
+                url="https://drive.google.com/file/d/16mCunl9Z4MYEU1iIWQjdBFyWbqlbBsDP/view?usp=sharing"
+                />
+              <Certificate
                 issuer="freeCodeCamp.org"
                 name="Responsive Web Design"
                 url="https://www.freecodecamp.org/certification/edmerkun/responsive-web-design"
