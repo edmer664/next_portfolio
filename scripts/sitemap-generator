@@ -1,7 +1,7 @@
 const fs = require('fs')
 const globby = require('globby')
 function addPage(page) {
-  const path = page.replace('pages', '').replace('.js', '').replace('.mdx', '')
+  const path = page.replace('pages', '').replace('.js', '').replace('.mdx', '').replace('.tsx', '')
   const route = path === '/index' ? '' : path
   return `  <url>
     <loc>${`${process.env.WEBSITE_URL}${route}`}</loc>
@@ -15,7 +15,7 @@ function addPage(page) {
 async function generateSitemap() {
   // excludes Nextjs files and API routes.
   const pages = await globby([
-    'pages/**/*{.js,.mdx,.tsx}',
+    'pages/**/*{.tsx,.mdx}',
     '!pages/_*{.js,.tsx}',
     '!pages/api',
   ])
