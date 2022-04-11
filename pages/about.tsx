@@ -63,7 +63,7 @@ const Certificate = ({
   return (
     <>
       <Link href={url}>
-        <a>
+        <a target='_blank'>
           <div className="px-5 py-3 m-3 transition-all duration-300 rounded-sm bg-neutral-100 dark:bg-black hover:ring-1 hover:ring-cyan-200">
             <h4 className="font-semibold">{name}</h4>
             <span className="opacity-70">{issuer}</span>
