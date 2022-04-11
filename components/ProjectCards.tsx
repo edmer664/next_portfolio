@@ -12,7 +12,7 @@ interface ProjectCardProps {
 export const ProjectCards = (props: ProjectCardProps) => {
   return (
     <Link href={`${props.url ? props.url : ""}`}>
-      <a data-aos="fade-up">
+      <a data-aos="fade-up" target="_blank">
         <article className="hover:bg-gradient-to-l hover:from-neutral-100 flex hover:scale-95 hover:px-3 hover:shadow-xl transition-all duration-100  ease-in-out dark:hover:from-black rounded-md hover:rotate-1 my-1 md:flex-row flex-col md:justify-evenly min-h-[300px] text-left">
           <div className="w-full md:w-1/2 ">
             <Image
