@@ -217,6 +217,11 @@ const About: NextPage = () => {
                 url="https://drive.google.com/file/d/16mCunl9Z4MYEU1iIWQjdBFyWbqlbBsDP/view?usp=sharing"
                 />
               <Certificate
+                issuer="Department of Information and Communications Technology"
+                name="Learn Basic Statistics with Python"
+                url="https://drive.google.com/file/d/1BhDm44jaOZwGNpwO0TiEJLtq_jfPH5U8/view?usp=sharing"
+                />
+              <Certificate
                 issuer="freeCodeCamp.org"
                 name="Responsive Web Design"
                 url="https://www.freecodecamp.org/certification/edmerkun/responsive-web-design"
