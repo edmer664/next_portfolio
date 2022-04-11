@@ -111,7 +111,8 @@ export const Contact = () => {
                       name="name"
                       type="text"
                       placeholder="Your name"
-                    />
+                      required
+                      />
                   </div>
                   <div className="mb-3">
                     <label
@@ -126,7 +127,8 @@ export const Contact = () => {
                       name="email"
                       type="email"
                       placeholder="Your email"
-                    />
+                      required
+                      />
                   </div>
                   {/* subject */}
                   <div className="mb-3">
@@ -142,7 +144,8 @@ export const Contact = () => {
                       name="subject"
                       type="text"
                       placeholder="Your subject"
-                    />
+                      required
+                      />
                   </div>
                   <div className="mb-3">
                     <label
@@ -157,7 +160,8 @@ export const Contact = () => {
                       name="message"
                       rows={3}
                       placeholder="Your message"
-                    />
+                      required
+                      />
                   </div>
                   <div className="flex items-center justify-between">
                     <button

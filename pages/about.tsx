@@ -41,12 +41,20 @@ import ThemeContext from "../context/ThemeContext";
 import { BsFlagFill } from "react-icons/bs";
 
 const TechStack = ({ Icon, name }: { Icon: IconType; name: string }) => {
+  let queryStr = name.replace(/\s/g, "+");
+  // escape special characters
+  queryStr = encodeURIComponent(queryStr);
+
   return (
     <>
-      <div className="flex justify-between px-10 py-3 mx-2 my-1 border-2 rounded-sm md:my-5 md:hover:animate-bounce border-neutral-900 dark:border-white">
-        <Icon className="" size={27} />
-        <p className="pl-2 font-bold">{name}</p>
-      </div>
+      <Link href={`https://www.google.com/search?q=${queryStr}`}>
+        <a target='_blank'>
+          <div className="flex justify-between px-10 py-3 mx-2 my-1 border-2 rounded-sm md:my-5 md:hover:animate-bounce border-neutral-900 dark:border-white">
+            <Icon className="" size={27} />
+            <p className="pl-2 font-bold">{name}</p>
+          </div>
+        </a>
+      </Link>
     </>
   );
 };
@@ -63,7 +71,7 @@ const Certificate = ({
   return (
     <>
       <Link href={url}>
-        <a target='_blank'>
+        <a target="_blank">
           <div className="px-5 py-3 m-3 transition-all duration-300 rounded-sm bg-neutral-100 dark:bg-black hover:ring-1 hover:ring-cyan-200">
             <h4 className="font-semibold">{name}</h4>
             <span className="opacity-70">{issuer}</span>
@@ -96,7 +104,7 @@ const About: NextPage = () => {
               was in my late 15, early of 2020, start of the pandemic.
             </p>
             <Link href="https://docs.google.com/document/d/1rzbFhHUa_MlKNLRG_MUAo4B6fTKN-Oe8Ysfe9W5nXhI/edit?usp=sharing">
-              <a className="px-5 py-3 mr-3 text-white transition-all border-2 sm:px-10 sm:py-4 md:px-12 md:py-4 bg-neutral-800 border-neutral-800 hover:bg-neutral-700 hover:text-neutral-200">
+              <a target='_blank' className="px-5 py-3 mr-3 text-white transition-all border-2 sm:px-10 sm:py-4 md:px-12 md:py-4 bg-neutral-800 border-neutral-800 hover:bg-neutral-700 hover:text-neutral-200">
                 View Resume
               </a>
             </Link>
@@ -177,7 +185,7 @@ const About: NextPage = () => {
               <TechStack Icon={SiJavascript} name="JavaScript" />
               <TechStack Icon={SiTailwindcss} name="Tailwind CSS" />
               <TechStack Icon={SiBootstrap} name="Bootstrap5" />
-              <TechStack Icon={SiMaterialui} name="MaterialUI" />
+              <TechStack Icon={SiMaterialui} name="Material UI" />
             </div>
             <h3 className="pt-10 pb-5 text-xl">Back-end</h3>
             <div className="flex flex-wrap justify-evenly md:justify-start">
@@ -215,12 +223,12 @@ const About: NextPage = () => {
                 issuer="PocketDevs"
                 name="Web Development Fundamentals Certificate"
                 url="https://drive.google.com/file/d/16mCunl9Z4MYEU1iIWQjdBFyWbqlbBsDP/view?usp=sharing"
-                />
+              />
               <Certificate
                 issuer="Department of Information and Communications Technology"
                 name="Learn Basic Statistics with Python"
                 url="https://drive.google.com/file/d/1BhDm44jaOZwGNpwO0TiEJLtq_jfPH5U8/view?usp=sharing"
-                />
+              />
               <Certificate
                 issuer="freeCodeCamp.org"
                 name="Responsive Web Design"
