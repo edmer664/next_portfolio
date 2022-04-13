@@ -61,7 +61,7 @@ class MyDocument extends Document {
 
           <meta
             name="keywords"
-            content="Edmer, Edmerson, Pizarra, Web Developer, PocketDevs, Programmer, Freelancer, Filipino, commission, science, bataan, Philippines, Edmerkun, hikari, John, computer, Developer, Software, Solutions, IT, problem, solving, django, javascript, python, technology, edmerpizarra, programming, contact,freelancer,upwork,portfolio, edmerpizarra, "
+            content="John Edmerson Pizarra, Edmerson, John Edmerson, Edmer, Edmerson, Pizarra, Web Developer, PocketDevs, Programmer, Freelancer, Filipino, commission, science, bataan, Philippines, Edmerkun, hikari, John, computer, Developer, Software, Solutions, IT, problem, solving, django, javascript, python, technology, edmerpizarra, programming, contact,freelancer,upwork,portfolio,"
           />
           <meta name="robots" content="index, follow" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />

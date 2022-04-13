@@ -39,7 +39,7 @@ export const BlankLayout = ({ children }: { children: React.ReactNode }) => {
               height={57}
               objectFit="cover"
               src={"/assets/images/logo.svg"}
-              alt=""
+              alt="edmer logo"
             />
           </div>
           <BarLoader color="#363636" height={4} width={100} />

@@ -72,7 +72,7 @@ export default function Navbar() {
             height={57}
             objectFit="cover"
             src={"/assets/images/logo.svg"}
-            alt="Edmer"
+            alt="Edmer Logo"
           />
         </div>
         {/* mobile toggle icon */}

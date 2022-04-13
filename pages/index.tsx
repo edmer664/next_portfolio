@@ -58,7 +58,7 @@ const Home: NextPage = () => {
             height={550}
             objectFit="contain"
             src={"/assets/images/hero-image.png"}
-            alt="Hero Img"
+            alt="John Edmerson Pizarra"
           />
         </div>
       </section>
@@ -82,7 +82,7 @@ const Home: NextPage = () => {
               height={100}
               objectFit="contain"
               src={"/assets/images/responsive.svg"}
-              alt="article image"
+              alt="Responsive Design"
             />
             <h3 className="py-4 font-bold">Elegant Design</h3>
             <p>Receive your website in a clean and elegant UI.</p>
@@ -96,7 +96,7 @@ const Home: NextPage = () => {
               height={100}
               objectFit="contain"
               src={"/assets/images/service.svg"}
-              alt="article image"
+              alt="Cheap Service"
             />
             <h3 className="py-4 font-bold">Inexpensive Service</h3>
             <p>
@@ -113,7 +113,7 @@ const Home: NextPage = () => {
               height={100}
               objectFit="contain"
               src={"/assets/images/tech.svg"}
-              alt="article image"
+              alt="Modern Technologies"
             />
             <h3 className="py-4 font-bold">Modern Technologies</h3>
             <p>

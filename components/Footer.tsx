@@ -42,7 +42,7 @@ export default function Footer() {
             height={57}
             objectFit="cover"
             src={"/assets/images/logo.svg"}
-            alt="Edmer"
+            alt="Edmer Logo"
           />
         </div>
         <div className="flex md:w-2/4">
