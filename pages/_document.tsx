@@ -23,9 +23,10 @@ class MyDocument extends Document {
             type="image/x-icon"
           />
 
+          
           <meta
             name="description"
-            content="Hello, I’m Edmerson Pizarra, a 17-year-old Freelance Software Developer, based in the Philippines."
+            content="An experienced freelance software developer based in the Philippines.  Develops quality, modern and affordable websites."
           />
 
           <meta property="og:type" content="website" />
@@ -33,7 +34,7 @@ class MyDocument extends Document {
           <meta property="og:title" content="Edmerson Pizarra" />
           <meta
             property="og:description"
-            content="Hello, I’m Edmerson Pizarra, a 17-year-old Freelance Software Developer, based in the Philippines."
+            content="An experienced freelance software developer based in the Philippines.  Develops quality, modern and affordable websites."
           />
           <meta
             property="og:image"
@@ -45,7 +46,7 @@ class MyDocument extends Document {
           <meta property="twitter:title" content="Edmerson Pizarra" />
           <meta
             property="twitter:description"
-            content="Hello, I’m Edmerson Pizarra, a 17-year-old Freelance Software Developer, based in the Philippines."
+            content="An experienced freelance software developer based in the Philippines.  Develops quality, modern and affordable websites."
           />
           <meta
             property="twitter:image"
@@ -56,11 +57,11 @@ class MyDocument extends Document {
             name="image"
             content="https://www.edmer.xyz/assets/images/banner.png"
           ></meta>
-          <meta name="title" content="Edmerson Pizarra" />
+          <meta name="title" content="Edmer Pizarra - Software Developer" />
 
           <meta
             name="keywords"
-            content="Edmer, Edmerson, Pizarra, Web Developer, PocketDevs, Programmer, Freelancer, Filipino, commission, science, bataan, Philippines, Edmerkun, hikari, John, computer, Developer, Software, Solutions, IT, problem, solving, django, javascript, python, technology, edmerpizarra, programming, contact"
+            content="Edmer, Edmerson, Pizarra, Web Developer, PocketDevs, Programmer, Freelancer, Filipino, commission, science, bataan, Philippines, Edmerkun, hikari, John, computer, Developer, Software, Solutions, IT, problem, solving, django, javascript, python, technology, edmerpizarra, programming, contact,freelancer,upwork,portfolio, edmerpizarra, "
           />
           <meta name="robots" content="index, follow" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
