@@ -18,9 +18,7 @@ const Home: NextPage = () => {
   return (
     <>
     <Head>
-      <title>
-        Edmer - Home
-      </title>
+    <title>Edmer Pizarra - Software Developer</title>
       
     </Head>
     <BlankLayout>
