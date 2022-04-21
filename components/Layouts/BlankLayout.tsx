@@ -31,8 +31,8 @@ export const BlankLayout = ({ children }: { children: React.ReactNode }) => {
                 gtag('config', 'G-JT4HB2V0WS');
             `}
       </Script>
-      {isLoading ? (
-        <div className="flex flex-col items-center justify-center w-screen h-screen bg-slate-100">
+      
+        <div className={`fixed z-50 flex flex-col items-center justify-center w-screen h-screen bg-slate-100 ${isLoading ? '' : 'hidden' }`}>
           <div className="py-3">
             <Image
               width={57}
@@ -44,7 +44,7 @@ export const BlankLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
           <BarLoader color="#363636" height={4} width={100} />
         </div>
-      ) : (
+      
         <div className={`${theme.isDark ? "dark" : ""}`}>
           <div className="dark:bg-neutral-900 dark:text-neutral-200">
             <Navbar />
@@ -53,7 +53,7 @@ export const BlankLayout = ({ children }: { children: React.ReactNode }) => {
             <Footer />
           </div>
         </div>
-      )}
+      
     </>
   );
 };

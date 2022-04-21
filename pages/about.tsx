@@ -96,7 +96,7 @@ const About: NextPage = () => {
           <article className="pb-32">
             <h2 className="pb-10 text-2xl font-extrabold">Background</h2>
             <p className="pb-10 text-xl font-medium leading-loose text-justify">
-              Hello, I&apos;m Edmerson Pizarra, a 17-year-old Software
+              Hello, I&apos;m John Edmerson Pizarra, a 17-year-old Software
               Developer, based in the Philippines. Currently I&apos;m a Grade 12
               Senior High School, studying at West Philippines Institute in
               Limay, Bataan. Since when I was young, I&apos;ve always been
