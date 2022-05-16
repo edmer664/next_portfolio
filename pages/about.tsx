@@ -45,6 +45,19 @@ const TechStack = ({ Icon, name }: { Icon: IconType; name: string }) => {
   // escape special characters
   queryStr = encodeURIComponent(queryStr);
 
+  function getAge(dateString) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+  }
+
+  const age = getAge('2004-06-06');
+
   return (
     <>
       <Link href={`https://www.google.com/search?q=${queryStr}`}>
@@ -96,7 +109,7 @@ const About: NextPage = () => {
           <article className="pb-32">
             <h2 className="pb-10 text-2xl font-extrabold">Background</h2>
             <p className="pb-10 text-xl font-medium leading-loose text-justify">
-              Hello, I&apos;m John Edmerson Pizarra, a 17-year-old Software
+              Hello, I&apos;m John Edmerson Pizarra, a {age}-year-old Software
               Developer, based in the Philippines. Currently I&apos;m a Grade 12
               Senior High School, studying at West Philippines Institute in
               Limay, Bataan. Since when I was young, I&apos;ve always been
