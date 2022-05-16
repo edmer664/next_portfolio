@@ -36,7 +36,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import ThemeContext from "../context/ThemeContext";
 import { BsFlagFill } from "react-icons/bs";
 
@@ -45,18 +45,7 @@ const TechStack = ({ Icon, name }: { Icon: IconType; name: string }) => {
   // escape special characters
   queryStr = encodeURIComponent(queryStr);
 
-  function getAge(dateString:string) {
-    var today = new Date();
-    var birthDate = new Date(dateString);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-    }
-    return age;
-  }
-
-  const age = getAge('2004-06-06');
+  
 
   return (
     <>
@@ -97,6 +86,21 @@ const Certificate = ({
 
 const About: NextPage = () => {
   const theme = useContext(ThemeContext);
+
+  function getAge(dateString:string) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+  }
+
+  const [age,setAge] = useState(getAge('2004-06-06'));
+
+
   return (
     <>
       <Head>
