@@ -45,7 +45,7 @@ const TechStack = ({ Icon, name }: { Icon: IconType; name: string }) => {
   // escape special characters
   queryStr = encodeURIComponent(queryStr);
 
-  function getAge(dateString) {
+  function getAge(dateString:string) {
     var today = new Date();
     var birthDate = new Date(dateString);
     var age = today.getFullYear() - birthDate.getFullYear();
