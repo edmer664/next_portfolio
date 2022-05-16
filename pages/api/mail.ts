@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { redirect } from 'next/dist/server/api-utils';
 import { useRouter } from 'next/router';
 
 export default function handler(req:NextApiRequest, res:NextApiResponse) {
@@ -28,11 +29,7 @@ export default function handler(req:NextApiRequest, res:NextApiResponse) {
     (message:any) => {
      console.log(message);
       // redirect to thank you page
-      res.json({
-        message: 'Email sent successfully'
-      });
-     
-      
+      redirect(res, '/');
 
     }
   ).catch(
