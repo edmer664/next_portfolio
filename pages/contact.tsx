@@ -5,6 +5,9 @@ import { BlankLayout } from "../components/Layouts/BlankLayout";
 import { PopupButton } from "react-calendly";
 import Script from "next/script";
 import Link from "next/link";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export const Contact = () => {
   useEffect(() => {
