@@ -9,11 +9,13 @@ import "animate.css";
 
 const Navlink = ({ name, url }: { name: string; url: string }) => {
   return (
-    <li className="w-full px-1 py-3 transition-all border-b-2 border-neutral-600 hover:bg-gray-400 d-block bg-slate-50 dark:bg-neutral-800 dark:hover:bg-gray-700 ">
-      <Link href={url}>
-        <a>{name}</a>
-      </Link>
-    </li>
+    <Link href={url}>
+      <a>
+        <li className="w-full px-1 py-3 transition-all border-b-2 border-neutral-600 hover:bg-gray-400 d-block bg-slate-50 dark:bg-neutral-800 dark:hover:bg-gray-700 ">
+          {name}
+        </li>
+      </a>
+    </Link>
   );
 };
 
