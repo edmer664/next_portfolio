@@ -45,12 +45,10 @@ const TechStack = ({ Icon, name }: { Icon: IconType; name: string }) => {
   // escape special characters
   queryStr = encodeURIComponent(queryStr);
 
-  
-
   return (
     <>
       <Link href={`https://www.google.com/search?q=${queryStr}`}>
-        <a target='_blank'>
+        <a target="_blank">
           <div className="flex justify-between px-10 py-3 mx-2 my-1 border-2 rounded-sm md:my-5 md:hover:animate-bounce border-neutral-900 dark:border-white">
             <Icon className="" size={27} />
             <p className="pl-2 font-bold">{name}</p>
@@ -84,22 +82,71 @@ const Certificate = ({
   );
 };
 
+export const Stack = () => {
+  return (
+    <div className="py-32">
+      <h2 className="pb-24 text-4xl font-bold md:pb-32 md:text-5xl"
+            data-aos="fade-right">Tech Stack</h2>
+      <h3 className="pb-5 text-xl">Front-End</h3>
+      <div className="flex flex-wrap justify-evenly md:justify-start">
+        <TechStack Icon={SiNextdotjs} name="Next.js" />
+        <TechStack Icon={SiReact} name="React" />
+        <TechStack Icon={SiTailwindcss} name="Tailwind CSS" />
+        <TechStack Icon={SiBootstrap} name="Bootstrap5" />
+        <TechStack Icon={SiMaterialui} name="Material UI" />
+      </div>
+      <h3 className="pt-10 pb-5 text-xl">Back-end</h3>
+      <div className="flex flex-wrap justify-evenly md:justify-start">
+        <TechStack Icon={SiDjango} name="Django" />
+        <TechStack Icon={SiLaravel} name="Laravel" />
+        <TechStack Icon={SiFlask} name="Flask" />
+      </div>
+      <h3 className="pt-10 pb-5 text-xl">Version Control</h3>
+      <div className="flex flex-wrap justify-evenly md:justify-start">
+        <TechStack Icon={SiGit} name="Git" />
+        <TechStack Icon={SiGithub} name="GitHub" />
+      </div>
+      <h3 className="pt-10 pb-5 text-xl">Database</h3>
+      <div className="flex flex-wrap justify-evenly md:justify-start">
+        <TechStack Icon={SiMysql} name="MySQL" />
+        <TechStack Icon={SiPostgresql} name="PostgreSQL" />
+        <TechStack Icon={SiSqlite} name="SQLite" />
+      </div>
+      <h3 className="pt-10 pb-5 text-xl">Mobile Development</h3>
+      <div className="flex flex-wrap justify-evenly md:justify-start">
+        <TechStack Icon={SiAndroidstudio} name="Android Studio" />
+        <TechStack Icon={SiFlutter} name="Flutter" />
+      </div>
+      <h3 className="pt-10 pb-5 text-xl">Programming Languages</h3>
+      <div className="flex flex-wrap justify-evenly md:justify-start">
+        <TechStack Icon={SiTypescript} name="TypeScript" />
+        <TechStack Icon={SiJavascript} name="JavaScript" />
+        <TechStack Icon={SiPython} name="Python" />
+        <TechStack Icon={SiPhp} name="PHP" />
+        <TechStack Icon={SiKotlin} name="Kotlin" />
+        <TechStack Icon={SiJava} name="Java" />
+        <TechStack Icon={SiCplusplus} name="C/C++" />
+        <TechStack Icon={SiDart} name="Dart" />
+      </div>
+    </div>
+  );
+};
+
 const About: NextPage = () => {
   const theme = useContext(ThemeContext);
 
-  function getAge(dateString:string) {
+  function getAge(dateString: string) {
     var today = new Date();
     var birthDate = new Date(dateString);
     var age = today.getFullYear() - birthDate.getFullYear();
     var m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
+      age--;
     }
     return age;
   }
 
-  const [age,setAge] = useState(getAge('2004-06-06'));
-
+  const [age, setAge] = useState(getAge("2004-06-06"));
 
   return (
     <>
@@ -121,7 +168,10 @@ const About: NextPage = () => {
               was in my late 15, early of 2020, start of the pandemic.
             </p>
             <Link href="https://docs.google.com/document/d/1rzbFhHUa_MlKNLRG_MUAo4B6fTKN-Oe8Ysfe9W5nXhI/edit?usp=sharing">
-              <a target='_blank' className="px-5 py-3 mr-3 text-white transition-all border-2 sm:px-10 sm:py-4 md:px-12 md:py-4 bg-neutral-800 border-neutral-800 hover:bg-neutral-700 hover:text-neutral-200">
+              <a
+                target="_blank"
+                className="px-5 py-3 mr-3 text-white transition-all border-2 sm:px-10 sm:py-4 md:px-12 md:py-4 bg-neutral-800 border-neutral-800 hover:bg-neutral-700 hover:text-neutral-200"
+              >
                 View Resume
               </a>
             </Link>
@@ -149,7 +199,7 @@ const About: NextPage = () => {
             <VerticalTimelineElement
               className="vertical-timeline-element--work dark:text-neutral-600"
               dateClassName="dark:text-white"
-              date="2020 - Present"
+              date="2020 - 2022"
               iconStyle={{ background: "#363636", color: "#fff" }}
               icon={<MdSchool />}
             >
@@ -165,7 +215,7 @@ const About: NextPage = () => {
             <VerticalTimelineElement
               className=" vertical-timeline-element--work dark:text-neutral-600"
               contentStyle={{ background: "#c00000" }}
-              date="2022 - Present"
+              date="2022"
               dateClassName="dark:text-white text-white lg:text-neutral-800"
               iconStyle={{ background: "#c00000", color: "#fff" }}
               icon={<MdWork />}
@@ -185,21 +235,14 @@ const About: NextPage = () => {
               icon={<BsFlagFill />}
             />
           </VerticalTimeline>
-
+            
+          {/* TODO: Refactor to component */}
           <div className="py-32">
             <h2 className="pb-10 text-2xl font-extrabold">Tech Stack</h2>
-            <h3 className="pt-10 pb-5 text-xl">Version Control</h3>
-            <div className="flex flex-wrap justify-evenly md:justify-start">
-              <TechStack Icon={SiGit} name="Git" />
-              <TechStack Icon={SiGithub} name="GitHub" />
-            </div>
             <h3 className="pt-10 pb-5 text-xl">Front-End</h3>
             <div className="flex flex-wrap justify-evenly md:justify-start">
               <TechStack Icon={SiNextdotjs} name="Next.js" />
               <TechStack Icon={SiReact} name="React" />
-              <TechStack Icon={SiCss3} name="CSS3" />
-              <TechStack Icon={SiHtml5} name="HTML5" />
-              <TechStack Icon={SiJavascript} name="JavaScript" />
               <TechStack Icon={SiTailwindcss} name="Tailwind CSS" />
               <TechStack Icon={SiBootstrap} name="Bootstrap5" />
               <TechStack Icon={SiMaterialui} name="Material UI" />
@@ -209,6 +252,11 @@ const About: NextPage = () => {
               <TechStack Icon={SiDjango} name="Django" />
               <TechStack Icon={SiLaravel} name="Laravel" />
               <TechStack Icon={SiFlask} name="Flask" />
+            </div>
+            <h3 className="pt-10 pb-5 text-xl">Version Control</h3>
+            <div className="flex flex-wrap justify-evenly md:justify-start">
+              <TechStack Icon={SiGit} name="Git" />
+              <TechStack Icon={SiGithub} name="GitHub" />
             </div>
             <h3 className="pt-10 pb-5 text-xl">Database</h3>
             <div className="flex flex-wrap justify-evenly md:justify-start">
@@ -224,6 +272,7 @@ const About: NextPage = () => {
             <h3 className="pt-10 pb-5 text-xl">Programming Languages</h3>
             <div className="flex flex-wrap justify-evenly md:justify-start">
               <TechStack Icon={SiTypescript} name="TypeScript" />
+              <TechStack Icon={SiJavascript} name="JavaScript" />
               <TechStack Icon={SiPython} name="Python" />
               <TechStack Icon={SiPhp} name="PHP" />
               <TechStack Icon={SiKotlin} name="Kotlin" />
