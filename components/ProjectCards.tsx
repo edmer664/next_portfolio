@@ -18,7 +18,7 @@ export const ProjectCards = (props: ProjectCardProps) => {
             <Image
               width={400}
               height={300}
-              objectFit="cover"
+              objectFit="contain"
               src={props.imageURL}
               alt={`${props.title} Image`}
             />

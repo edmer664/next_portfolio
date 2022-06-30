@@ -15,6 +15,20 @@ export const Projects: NextPage = () => {
           <h1 className="py-10 font-extrabold text-7xl">Projects</h1>
           <div className="flex flex-col w-full pb-32">
             <ProjectCards
+              imageURL="/assets/images/projects/connect.png"
+              title="Connect Outsourcing"
+              description="Connect Outsourcing aims to deliver high-quality services, mostly to the healthcare industry, which requires the assistance of virtual assistants. We are meeting the changing need for virtual workers.
+            "
+              url="https://connect-outsourcing.com"
+            />
+            <ProjectCards
+              imageURL="/assets/images/projects/wpi2.png"
+              title="West Philippines Institute Website"
+              description="A capstone project built with laravel and bootstrap. A web-based application to serve as an alternative solution for enrollment of West Philippines Institute.
+              "
+              url="https://wpi.edmer.xyz"
+            />
+            <ProjectCards
               imageURL="/assets/images/projects/confession.png"
               title="Confession Board"
               description="An Open-Source website dedicated to letting people express their secrets anonymously. Using Django and PostgreSQL as the backend and NextJs + Bootstrap for the Front-end.
@@ -26,14 +40,7 @@ export const Projects: NextPage = () => {
               title="Pocket Hub"
               description="A fully-featured social website implemented using PHP laravel and javascript. A fully functional CRUD application, feat includes but is not limited to posts, comments, and messages.
             "
-              url="https://hub.pocketdevs.ph"
-            />
-            <ProjectCards
-              imageURL="/assets/images/projects/wpi2.png"
-              title="WPI Enrollment System"
-              description="An unofficial website for West Philippines Institute implemented using React, JavaScript, Python, and Django. The app uses Django as the backend to perform backend processing for enrollment system and information board.
-            "
-              url="https://wpi.edmer.xyz"
+              url="https://github.com/edmer664/pocketHub"
             />
             <ProjectCards
               imageURL="/assets/images/projects/rpcstud.jpg"
@@ -43,7 +50,7 @@ export const Projects: NextPage = () => {
               url="https://github.com/edmer664/StudyingRPC"
             />
             <ProjectCards
-              imageURL="/assets/images/projects/wpi2.png"
+              imageURL="/assets/images/projects/cli.jpg"
               title="CLI random_picker"
               description="Can't pick about something? Let this random picker do the decision for you. Simply open your command-line/terminal and call this little script to make that hard decision for you. 
             "
