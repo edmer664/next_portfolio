@@ -108,6 +108,11 @@ export default function Navbar() {
               url="/contact"
               isActive={currentLink === "/contact"}
             />
+            <NavlinkDesktop
+              name="Blog"
+              url="https://blog.edmer.xyz"
+              isActive={currentLink === "/blog"}
+            />
           </ul>
         </div>
 
@@ -139,6 +144,7 @@ export default function Navbar() {
           <Navlink name="About" url="/about" />
           <Navlink name="Projects" url="/projects" />
           <Navlink name="Contact" url="/contact" />
+          <Navlink name="Blog" url="https://blog.edmer.xyz" />
         </ul>
         {/* dark mode btn */}
         <div className="flex justify-center mt-2">
