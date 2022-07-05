@@ -33,9 +33,9 @@ const Home: NextPage = () => {
               </h1>
             </div>
             <div className="flex justify-start mt-16 mb-3">
-              <Link href="/projects">
+              <Link href="/about">
                 <a className="px-5 py-3 mr-3 transition-all border-2 sm:px-10 sm:py-4 md:px-12 md:py-4 hover:bg-neutral-700 hover:text-neutral-200">
-                  My Works
+                  Learn More
                 </a>
               </Link>
               <Link href="/contact">
@@ -169,9 +169,9 @@ const Home: NextPage = () => {
         </section>
         {/* PROJECTS END */}
         {/* TECH STACK START */}
-        <section className="py-20 px-7 lg:px-40">
+        {/* <section className="py-20 px-7 lg:px-40">
           <Stack />
-        </section>
+        </section> */}
       </BlankLayout>
     </>
   );
