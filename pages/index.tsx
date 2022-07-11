@@ -130,6 +130,12 @@ const Home: NextPage = () => {
             Recent Projects
           </h2>
           <div className="flex flex-col w-full pb-32">
+            <ProjectCards 
+              imageURL="/assets/images/projects/jokesapimockup.png"
+              title="JokesAPI Mobile App"
+              description="A mobile app that allows you to get random jokes from the internet."
+              url="https://github.com/edmer664/JokesAPI"
+            />
             <ProjectCards
               imageURL="/assets/images/projects/connect.png"
               title="Connect Outsourcing"
@@ -142,7 +148,7 @@ const Home: NextPage = () => {
               title="West Philippines Institute Website"
               description="A capstone project built with laravel and bootstrap. A web-based application to serve as an alternative solution for enrollment of West Philippines Institute.
                 "
-              url="https://wpi.edmer.xyz"
+              url="https://westphil.herokuapp.com"
             />
             <ProjectCards
               imageURL="/assets/images/projects/confession.png"
