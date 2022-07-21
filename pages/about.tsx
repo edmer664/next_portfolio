@@ -227,6 +227,24 @@ const About: NextPage = () => {
                 PocketDevs
               </h4>
               <small className="text-white ">
+                Assist in developing and maintaing web applications for clients
+              </small>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className=" vertical-timeline-element--work dark:text-neutral-600"
+              contentStyle={{ background: "#c00000" }}
+              date="2022"
+              dateClassName="dark:text-white text-white lg:text-neutral-800"
+              iconStyle={{ background: "#c00000", color: "#fff" }}
+              icon={<MdWork />}
+            >
+              <h3 className="font-bold text-white vertical-timeline-element-title">
+                Junior Full-Stack Developer
+              </h3>
+              <h4 className="text-white vertical-timeline-element-subtitle">
+                PocketDevs
+              </h4>
+              <small className="text-white ">
                 Develop and maintain web applications for clients
               </small>
             </VerticalTimelineElement>
