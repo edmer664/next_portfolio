@@ -51,7 +51,7 @@ const TechStack = ({ Icon, name }: { Icon: IconType; name: string }) => {
         <a target="_blank">
           <div className="flex justify-between px-10 py-3 mx-2 my-1 border-2 rounded-sm md:my-5 md:hover:animate-bounce border-neutral-900 dark:border-white">
             <Icon className="" size={27} />
-            <p className="pl-2 font-bold">{name}</p>
+            <p className="hidden pl-2 font-bold md:block">{name}</p>
           </div>
         </a>
       </Link>
@@ -162,7 +162,7 @@ const About: NextPage = () => {
             <p className="pb-10 text-xl font-medium leading-loose text-justify">
               Hello, I&apos;m John Edmerson Pizarra, a {age}-year-old Software
               Developer, based in the Philippines. Currently I&apos;m a College Student, studying at Eastwoods Professional College of Science &amp; Technology in
-              Balanga, Bataan. Since when I was young, I&apos;ve always been
+              Balanga City. Since when I was young, I&apos;ve always been
               interested in technology. I started my programming journey when I
               was in my late 15, early of 2020, start of the pandemic.
             </p>
@@ -232,7 +232,7 @@ const About: NextPage = () => {
             <VerticalTimelineElement
               className=" vertical-timeline-element--work dark:text-neutral-600"
               contentStyle={{ background: "#c00000" }}
-              date="2022"
+              date="2022 - Present"
               dateClassName="dark:text-white text-white lg:text-neutral-800"
               iconStyle={{ background: "#c00000", color: "#fff" }}
               icon={<MdWork />}
@@ -248,6 +248,22 @@ const About: NextPage = () => {
               </small>
             </VerticalTimelineElement>
             <VerticalTimelineElement
+              className="vertical-timeline-element--work dark:text-neutral-600"
+              dateClassName="dark:text-white"
+              date="2022 - Present"
+              iconStyle={{ background: "#363636", color: "#fff" }}
+              icon={<MdSchool />}
+            >
+              <h3 className="font-bold vertical-timeline-element-title">
+                Eastwoods Professional College of
+                Science &amp; Technology{" "}
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Balanga City
+              </h4>
+              <small>Bachelor of Science in Computer Science</small>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
               iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
               icon={<BsFlagFill />}
             />
@@ -257,7 +273,7 @@ const About: NextPage = () => {
           <div className="py-32">
             <h2 className="pb-10 text-2xl font-extrabold">Tech Stack</h2>
             <h3 className="pt-10 pb-5 text-xl">Front-End</h3>
-            <div className="flex flex-wrap justify-evenly md:justify-start">
+            <div className="flex flex-wrap justify-start">
               <TechStack Icon={SiNextdotjs} name="Next.js" />
               <TechStack Icon={SiReact} name="React" />
               <TechStack Icon={SiTailwindcss} name="Tailwind CSS" />
@@ -265,29 +281,29 @@ const About: NextPage = () => {
               <TechStack Icon={SiMaterialui} name="Material UI" />
             </div>
             <h3 className="pt-10 pb-5 text-xl">Back-end</h3>
-            <div className="flex flex-wrap justify-evenly md:justify-start">
+            <div className="flex flex-wrap justify-start">
               <TechStack Icon={SiDjango} name="Django" />
               <TechStack Icon={SiLaravel} name="Laravel" />
               <TechStack Icon={SiFlask} name="Flask" />
             </div>
             <h3 className="pt-10 pb-5 text-xl">Version Control</h3>
-            <div className="flex flex-wrap justify-evenly md:justify-start">
+            <div className="flex flex-wrap justify-start">
               <TechStack Icon={SiGit} name="Git" />
               <TechStack Icon={SiGithub} name="GitHub" />
             </div>
             <h3 className="pt-10 pb-5 text-xl">Database</h3>
-            <div className="flex flex-wrap justify-evenly md:justify-start">
+            <div className="flex flex-wrap justify-start">
               <TechStack Icon={SiMysql} name="MySQL" />
               <TechStack Icon={SiPostgresql} name="PostgreSQL" />
               <TechStack Icon={SiSqlite} name="SQLite" />
             </div>
             <h3 className="pt-10 pb-5 text-xl">Mobile Development</h3>
-            <div className="flex flex-wrap justify-evenly md:justify-start">
+            <div className="flex flex-wrap justify-start">
               <TechStack Icon={SiAndroidstudio} name="Android Studio" />
               <TechStack Icon={SiFlutter} name="Flutter" />
             </div>
             <h3 className="pt-10 pb-5 text-xl">Programming Languages</h3>
-            <div className="flex flex-wrap justify-evenly md:justify-start">
+            <div className="flex flex-wrap justify-start">
               <TechStack Icon={SiTypescript} name="TypeScript" />
               <TechStack Icon={SiJavascript} name="JavaScript" />
               <TechStack Icon={SiPython} name="Python" />
