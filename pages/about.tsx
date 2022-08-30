@@ -160,8 +160,8 @@ const About: NextPage = () => {
           <article className="pb-32">
             <h2 className="pb-10 text-2xl font-extrabold">Background</h2>
             <p className="pb-10 text-xl font-medium leading-loose text-justify">
-              Hello, I&apos;m John Edmerson Pizarra, a {age}-year-old Software
-              Developer, based in the Philippines. Currently I&apos;m a College Student, studying at Eastwoods Professional College of Science &amp; Technology in
+              Hello, I&apos;m John Edmerson Pizarra, an {age}-year-old Software
+              Developer, based in the Philippines. Currently I&apos;m a College Student, studying at Bataan Peninsula State University - Main Campus in
               Balanga City. Since when I was young, I&apos;ve always been
               interested in technology. I started my programming journey when I
               was in my late 15, early of 2020, start of the pandemic.
@@ -255,13 +255,12 @@ const About: NextPage = () => {
               icon={<MdSchool />}
             >
               <h3 className="font-bold vertical-timeline-element-title">
-                Eastwoods Professional College of
-                Science &amp; Technology{" "}
+                Bataan Peninsula State University - Main Campus{" "}
               </h3>
               <h4 className="vertical-timeline-element-subtitle">
                 Balanga City
               </h4>
-              <small>Bachelor of Science in Computer Science</small>
+              <small>Bachelor of Science in Computer Science Major in Software Development</small>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
