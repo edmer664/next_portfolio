@@ -85,8 +85,12 @@ const Certificate = ({
 export const Stack = () => {
   return (
     <div className="py-32">
-      <h2 className="pb-24 text-4xl font-bold md:pb-32 md:text-5xl"
-            data-aos="fade-right">Tech Stack</h2>
+      <h2
+        className="pb-24 text-4xl font-bold md:pb-32 md:text-5xl"
+        data-aos="fade-right"
+      >
+        Tech Stack
+      </h2>
       <h3 className="pb-5 text-xl">Front-End</h3>
       <div className="flex flex-wrap justify-evenly md:justify-start">
         <TechStack Icon={SiNextdotjs} name="Next.js" />
@@ -160,11 +164,14 @@ const About: NextPage = () => {
           <article className="pb-32">
             <h2 className="pb-10 text-2xl font-extrabold">Background</h2>
             <p className="pb-10 text-xl font-medium leading-loose text-justify">
-              Hello, I&apos;m John Edmerson Pizarra, an {age}-year-old Software
-              Developer, based in the Philippines. Currently I&apos;m a College Student, studying at Bataan Peninsula State University - Main Campus in
-              Balanga City. Since when I was young, I&apos;ve always been
-              interested in technology. I started my programming journey when I
-              was in my late 15, early of 2020, start of the pandemic.
+             
+              Hello, Hi there! I&apos;m John Edmerson Pizarra, a Software Developer
+              from the Philippines. I&apos;m {age} years old. I&apos;m a student at the Main
+              Campus of Bataan Peninsula State University in Balanga City. I&apos;ve
+              always been fascinated by new technologies and scientific
+              innovations, even from an early age. Around the time the epidemic
+              broke out in 2020 (when I was about 15), I began dabbling in
+              computer programming.
             </p>
             <Link href="https://docs.google.com/document/d/1GLOYTv8wWdJmPZv5XjjUmUR-i0h0UN6tbyMYuT0TiDk/edit?usp=sharing">
               <a
@@ -260,14 +267,17 @@ const About: NextPage = () => {
               <h4 className="vertical-timeline-element-subtitle">
                 Balanga City
               </h4>
-              <small>Bachelor of Science in Computer Science Major in Software Development</small>
+              <small>
+                Bachelor of Science in Computer Science Major in Software
+                Development
+              </small>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
               icon={<BsFlagFill />}
             />
           </VerticalTimeline>
-            
+
           {/* TODO: Refactor to component */}
           <div className="py-32">
             <h2 className="pb-10 text-2xl font-extrabold">Tech Stack</h2>
